@@ -1,15 +1,15 @@
+---
+import { getI18N } from '../i18n/';
+const {currentLocale} = Astro
+const i18n = getI18N({currentLocale});
+---
+
 <section class="text-xl text-left px-20 max-w-[70ch] text-pretty mx-auto my-24">
   <img class="w-16 mb-10 m-auto" src="/logo.png" alt="Cosmere logo">
   <h1 class="text-4xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide">
-    Welcome<br /> to the Cosmere Awards
+    {i18n.INTRO_TITLE}<br /> {i18n.INTRO_TITLE_2}
   </h1>
-  <p>
-    Los premios que celebran la creatividad y el talento de uno de los más destacados autores del género fantástico: <strong>Brandon Sanderson.</strong>
-  </p>
-  <p>
-    Desde las arenas de Taldain hasta las brumas de Scadrial, los mundos del Cosmere se unen para reconocer y premiar las mejores obras que han capturado la imaginación y el corazón de <strong>miles de lectores.</strong>
-  </p>
-  <p>
-    En esta <strong>primera edición,</strong> nos reunimos para honrar los momentos épicos, los personajes inolvidables y las historias cautivadoras que han dado vida a este universo. Únete a nosotros para votar por tus libros y personajes favoritos y ser parte de <strong>esta celebración única.</strong>
-  </p>
+  <p set:html={i18n.INTRO_DESCRIPTION_1}></p>
+  <p set:html={i18n.INTRO_DESCRIPTION_2}></p>
+  <p set:html={i18n.INTRO_DESCRIPTION_3}></p>
 </section>
