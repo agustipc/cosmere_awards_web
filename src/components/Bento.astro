@@ -1,0 +1,56 @@
+---
+import BentoItem from './BentoItem.astro'
+---
+
+<section class={`
+  w-full max-w-[1400px]
+  grid grid-cols-10 auto-rows-[35rem] gap-4
+  mx-auto px-20
+`}>
+  <BentoItem class='col-span-10 md:col-span-4' title="JAPAN">
+    <div
+      slot="image"
+      class= "absolute left-0 top-0 bottom-0 w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-red-300 -z-10"
+      style="background-image: url('/landscape.png')"
+    />
+    <p slot='content' class="max-w-xl">
+      Join us in <strong>Japan,</strong> next to Mount Fuji, for the first edition of the <strong>Cosmere Awards.</strong> A celebration filled with live streams, collaborations, and concerts dedicated to Brandon Sanderson's universe.
+    </p>
+  </BentoItem>
+  <BentoItem class='col-span-10 md:col-span-6' title="THE RED CARPET" subtitle="November 16th of 2024">
+    <div
+      slot="image"
+      class= "absolute left-0 top-0 bottom-0 w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-red-200 -z-10"
+      style="background-image: url('/mount_fuji.png')"
+    />
+    <p slot='content' class="max-w-xl">
+      One of the most anticipated days of the year for the Cosmere community, with two major milestones concentrated in a single event. A <strong>red carpet</strong> where authors, illustrators, and passionate fans will parade in their finest attire, moments before discovering if they are the award recipients.
+      <br /><br />
+      All this with the majestic <strong>Mount Fuji as a backdrop,</strong> making this celebration an unforgettable event.
+      <br /><br />
+      Don't miss it.
+    </p>
+  </BentoItem>
+  <BentoItem class='col-span-10 md:col-span-6' title="THE GALA" subtitle="November 17th of 2024">
+    <div
+      slot="image"
+      class= "absolute left-0 top-0 bottom-0 w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-red-200 -z-10"
+      style="background-image: url('/brandon_sanderson_profile.png')"
+    />
+    <p slot='content' class="max-w-xl">
+      The highlight of the Cosmere Awards, <strong>the Gala,</strong> is an evening filled with excitement and celebration.
+      <br /><br />
+      Expect a night of unforgettable moments, including live performances, special guest appearances, and exclusive content that will captivate <strong>fans of Brandon Sanderson's books.</strong>
+    </p>
+  </BentoItem>
+  <BentoItem class='col-span-10 md:col-span-4' title="ENJOY THE REDDIT COMMUNITY">
+    <div
+      slot="image"
+      class= "absolute left-0 top-0 bottom-0 w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-red-200 -z-10"
+      style="background-image: url('/laptop.png')"
+    />
+    <p slot='content' class="max-w-xl">
+      Join the official <strong>Cosmere Awards subreddit</strong> to share clips, opinions, and interact with the community. Discuss your favorite moments and speculate on award winners.
+    </p>
+  </BentoItem>
+</section>
