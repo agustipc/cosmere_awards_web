@@ -20,6 +20,17 @@ const {currentLocale} = Astro
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+
+		<link
+			rel="preload"
+			href="/fonts/tomaso.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+
+		<slot name="preload" />
+
 		<ViewTransitions />
 	</head>
 	<body>
