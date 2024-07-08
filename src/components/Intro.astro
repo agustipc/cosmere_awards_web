@@ -4,7 +4,7 @@ const {currentLocale} = Astro
 const i18n = getI18N({currentLocale});
 ---
 
-<section class="text-xl text-left px-20 max-w-[70ch] text-pretty mx-auto my-24">
+<section class="relative z-10 mx-auto my-24 max-w-[70ch] text-pretty px-6 text-left text-xl sm:px-20">
   <img class="w-16 mb-10 m-auto" src="/logo.png" alt="Cosmere logo">
   <h1 class="text-4xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide">
     {i18n.INTRO_TITLE}<br /> {i18n.INTRO_TITLE_2}
