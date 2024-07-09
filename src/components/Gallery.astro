@@ -1,0 +1,78 @@
+---
+import 'photoswipe/style.css'
+
+const IMAGES = [
+  {
+    name: 'img-1',
+    width: 1100,
+    height: 550,
+  },
+  {
+    name: 'img-2',
+    width: 1100,
+    height: 550,
+  },
+  {
+    name: 'img-3',
+    width: 1100,
+    height: 550,
+  },
+  {
+    name: 'img-4',
+    width: 1100,
+    height: 550,
+  },
+  {
+    name: 'img-5',
+    width: 1280,
+    height: 720,
+  },
+  {
+    name: 'img-6',
+    width: 1100,
+    height: 629,
+  },
+  {
+    name: 'img-7',
+    width: 1100,
+    height: 629,
+  },
+  {
+    name: 'img-8',
+    width: 1100,
+    height: 629,
+  },
+  {
+    name: 'img-9',
+    width: 1100,
+    height: 629,
+  }
+]
+---
+<div class="grid grid-cols-3 max-w-6xl gap-6 mx-auto" id="gallery">
+  {
+    IMAGES.map((image) => (
+      <a class="group rounded-xl hover:scale-105 transition-all relative aspect-square" href={`/archivo-page/first-edition/gallery/${image.name}.webp`}
+        target="_blank"
+        data-cropped="true"
+        data-pswp-width={image.width}
+        data-pswp-height={image.height}
+      >
+        <img class="rounded-xl aspect-square object-cover" loading="lazy" src={`/archivo-page/first-edition/gallery/${image.name}.webp`} alt="">
+        <img class="blur-lg scale-50 group-hover:scale-100 absolute inset-0 transition -z-10 group-hover:contrast-150" loading="lazy" src={`/archivo-page/first-edition/gallery/${image.name}.webp`} alt="">
+      </a>
+    ))
+  }
+</div>
+
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+  });
+  lightbox.init();
+</script>
